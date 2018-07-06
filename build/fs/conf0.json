@@ -1,0 +1,194 @@
+{
+  "device": {
+    "id": "Mansaa_??????", 
+    "password": "", 
+    "location": {
+      "lat": 999.0, 
+      "lon": 999.0
+    }
+  }, 
+  "debug": {
+    "udp_log_addr": "", 
+    "level": 2, 
+    "filter": "", 
+    "stdout_uart": 0, 
+    "stderr_uart": 0, 
+    "factory_reset_gpio": -1, 
+    "mg_mgr_hexdump_file": "", 
+    "mbedtls_level": 0, 
+    "stdout_topic": "", 
+    "stderr_topic": ""
+  }, 
+  "sys": {
+    "mount": {
+      "path": "", 
+      "dev_type": "", 
+      "dev_opts": "", 
+      "fs_type": "", 
+      "fs_opts": ""
+    }, 
+    "tz_spec": "UTC-05:30", 
+    "wdt_timeout": 30, 
+    "pref_ota_lib": ""
+  }, 
+  "conf_acl": "*", 
+  "mqtt": {
+    "enable": false, 
+    "server": "iot.eclipse.org:1883", 
+    "client_id": "", 
+    "user": "", 
+    "pass": "", 
+    "reconnect_timeout_min": 2.0, 
+    "reconnect_timeout_max": 60.0, 
+    "ssl_cert": "", 
+    "ssl_key": "", 
+    "ssl_ca_cert": "", 
+    "ssl_cipher_suites": "", 
+    "ssl_psk_identity": "", 
+    "ssl_psk_key": "", 
+    "clean_session": true, 
+    "keep_alive": 60, 
+    "will_topic": "", 
+    "will_message": "", 
+    "max_qos": 2, 
+    "recv_mbuf_limit": 8192
+  }, 
+  "shadow": {
+    "enable": true, 
+    "lib": ""
+  }, 
+  "aws": {
+    "thing_name": "", 
+    "greengrass": {
+      "enable": false, 
+      "reconnect_timeout_min": 2, 
+      "reconnect_timeout_max": 60
+    }
+  }, 
+  "bt": {
+    "enable": true, 
+    "dev_name": "", 
+    "adv_enable": true, 
+    "scan_rsp_data_hex": "", 
+    "keep_enabled": false, 
+    "allow_pairing": true, 
+    "max_paired_devices": -1, 
+    "random_address": true, 
+    "gatts": {
+      "min_sec_level": 0, 
+      "require_pairing": false
+    }, 
+    "config_svc_enable": true
+  }, 
+  "sntp": {
+    "enable": true, 
+    "server": "time.google.com", 
+    "retry_min": 1, 
+    "retry_max": 30, 
+    "update_interval": 7200
+  }, 
+  "http": {
+    "enable": true, 
+    "listen_addr": "80", 
+    "document_root": "/", 
+    "ssl_cert": "", 
+    "ssl_key": "", 
+    "ssl_ca_cert": "", 
+    "upload_acl": "*", 
+    "hidden_files": "*", 
+    "auth_domain": "", 
+    "auth_file": ""
+  }, 
+  "mjs": {
+    "generate_jsc": true
+  }, 
+  "rpc": {
+    "enable": true, 
+    "max_frame_size": 4096, 
+    "max_queue_length": 25, 
+    "default_out_channel_idle_close_timeout": 10, 
+    "acl_file": "", 
+    "auth_domain": "", 
+    "auth_file": "", 
+    "ws": {
+      "enable": true, 
+      "server_address": "", 
+      "reconnect_interval_min": 1, 
+      "reconnect_interval_max": 60, 
+      "ssl_server_name": "", 
+      "ssl_ca_file": "", 
+      "ssl_client_cert_file": ""
+    }, 
+    "uart": {
+      "uart_no": 0, 
+      "baud_rate": 115200, 
+      "fc_type": 2
+    }
+  }, 
+  "wifi": {
+    "ap": {
+      "enable": true, 
+      "ssid": "Mansaa_??????", 
+      "pass": "", 
+      "hidden": false, 
+      "channel": 6, 
+      "max_connections": 10, 
+      "ip": "192.168.4.1", 
+      "netmask": "255.255.255.0", 
+      "gw": "192.168.4.1", 
+      "dhcp_start": "192.168.4.2", 
+      "dhcp_end": "192.168.4.100", 
+      "trigger_on_gpio": -1, 
+      "disable_after": 0, 
+      "hostname": "", 
+      "keep_enabled": true
+    }, 
+    "sta": {
+      "enable": false, 
+      "ssid": "", 
+      "pass": "", 
+      "user": "", 
+      "anon_identity": "", 
+      "cert": "", 
+      "key": "", 
+      "ca_cert": "", 
+      "ip": "", 
+      "netmask": "", 
+      "gw": "", 
+      "nameserver": "", 
+      "dhcp_hostname": ""
+    }, 
+    "sta1": {
+      "enable": false, 
+      "ssid": "", 
+      "pass": "", 
+      "user": "", 
+      "anon_identity": "", 
+      "cert": "", 
+      "key": "", 
+      "ca_cert": "", 
+      "ip": "", 
+      "netmask": "", 
+      "gw": "", 
+      "nameserver": "", 
+      "dhcp_hostname": ""
+    }, 
+    "sta2": {
+      "enable": false, 
+      "ssid": "", 
+      "pass": "", 
+      "user": "", 
+      "anon_identity": "", 
+      "cert": "", 
+      "key": "", 
+      "ca_cert": "", 
+      "ip": "", 
+      "netmask": "", 
+      "gw": "", 
+      "nameserver": "", 
+      "dhcp_hostname": ""
+    }, 
+    "sta_cfg_idx": 0, 
+    "sta_connect_timeout": 30
+  }
+}

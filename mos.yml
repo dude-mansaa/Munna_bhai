@@ -1,0 +1,96 @@
+name: mansaa
+author: mansaa_wifi_bulb
+description: A Mansaa light controlled via mansaa app
+version: 1.0
+
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+
+# Optional. List of tags for online search.
+
+
+# List of files / directories with C sources. No slashes at the end of dir names.
+sources:
+  - src
+
+# List of dirs. Files from these dirs will be copied to the device filesystem
+filesystem:
+  - fs
+
+# Custom configuration entries, settable via "device configuration"
+# Below is a custom firmware configuration example.
+# Uncomment and modify according to your needs:
+
+# config_schema:
+#  - ["my_app", "o", {title: "My app custom settings"}]
+#  - ["my_app.bool_value", "b", false, {title: "Some boolean value"}]
+#  - ["my_app.string_value", "s", "", {title: "Some string value"}]
+#  - ["my_app.int_value", "i", 123, {title: "Some integer value"}]
+
+# These settings get compiled into the C structure, and can be accessed
+# from the C code this way:
+#
+# printf("Hello from %s!\n", mgos_sys_config_get_device_id());
+#
+# Settings are cool: can be modified remotely without full firmware upgrade!
+#
+# To see all available compiled settings, buid the firmware and open
+# build/gen/mgos_config.h file.
+#
+# Also, in this config_schema section, you can override existing
+# settings that has been created by other libraries. For example, debug log
+# level is 2 by default. For this firmware we can override it to 3:
+#
+# config_schema:
+#  - ["debug.level", 3]
+
+config_schema:
+  - ["device.id", "s", "Mansaa_??????",{title: "Device ID"}]
+
+  - ["http.enable", "b", true, {title: "Enable HTTP Server"}]
+  - ["http.listen_addr", "s", "80", {title: "Listening port / address"}]
+  - ["http.document_root", "s", "/", {title: "Root for serving files. Setting to empty disables file serving."}]
+  - ["http.ssl_cert", "s", {title: "Turn on SSL on the listener, use this cert"}]
+  - ["http.ssl_key", "s", {title: "SSL key to use"}]
+  - ["http.ssl_ca_cert", "s", {title: "Verify clients this CA bundle"}]
+  - ["http.upload_acl", "s", "*", {title: "Upload file ACL"}]
+  - ["http.hidden_files", "s","*",{title: "Hidden file pattern"}]
+  - ["http.auth_domain", "s", {title: "Enable authentication of all HTTP requests"}]
+  - ["http.auth_file", "s", {title: "Password file to use for auth"}]
+  
+  - ["wifi.ap.ssid", "s", "Mansaa_??????", {title: "SSID"}]
+  - ["wifi.ap.pass", "s", "", {title: "Password", type: "password"}]
+  
+  - ["sntp.enable", "b", true, {title: "Enable SNTP"}]
+  - ["sntp.server", "s", "time.google.com", {title: "Server address"}]
+  - ["sntp.retry_min", "i", 1, {title: "Minimum retry interval"}]
+  - ["sntp.retry_max", "i", 30, {title: "Maximum retry interval"}]
+  - ["sntp.update_interval", "i", 7200, {title: "Update interval. If 0, performs a one-off sync"}]
+  - ["sys.tz_spec", "s", "UTC-05:30", {title: "See formats for the TZ env var: \"man tzset\". Formats like \":/path/to/file\" are not supported"}]
+  
+tags:
+  - c
+  - cloud
+  - net
+  - http
+# List of libraries used by this app, in order of initialisation
+libs:
+    - origin: https://github.com/mongoose-os-libs/rpc-service-config
+    - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+    - origin: https://github.com/mongoose-os-libs/rpc-uart
+    - origin: https://github.com/mongoose-os-libs/rpc-loopback
+    - origin: https://github.com/mongoose-os-libs/bt-service-config
+    - origin: https://github.com/mongoose-os-libs/pwm
+    - origin: https://github.com/mongoose-os-libs/bt-common
+    - origin: https://github.com/mongoose-os-libs/wifi
+    - origin: https://github.com/mongoose-os-libs/mjs
+    - origin: https://github.com/mongoose-os-libs/http-server
+    - origin: https://github.com/mongoose-os-libs/sntp
+    - origin: https://github.com/mongoose-os-libs/mqtt
+    - origin: https://github.com/mongoose-os-libs/aws
+    - origin: https://github.com/mongoose-os-libs/shadow
+    - origin: https://github.com/mongoose-os-libs/cron
+
+# Used by the mos tool to catch mos binaries incompatible with this file format
+manifest_version: 2017-05-18
